@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sri Lanka Travelling Agency</title>
+        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       </head>
+   
+    <body>
+        <section class="sub-header">
+            <nav>
+               <a href="home.html"><img src="emerald.png" width = "150" height ="150"></a> 
+               <div class="nav-links">
+                <ul> 
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="packages.html">PACKAGES</a></li>
+                    <li><a href="destinations.html">DESTINATIONS</a></li>
+                    <li><a href="booking.html">BOOKING</a></li>
+                  </ul>
+               </div>
+            </nav>
+        </section>
+    
+
+  <section class="booking-section">
+  <div class="booking-left">
+    <h1>Your Gateway to Sri Lanka’s Wonders</h1>
+    <p>Plan your perfect adventure with us. Whether you're seeking beaches, mountains,
+       or cultural gems, we’ll tailor your journey to match your dreams.</p>
+  </div>
+
+  <div class="booking-right">
+    <h2>Booking Form</h2>
+    <form class="booking-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="package">Preffered Packages</label>
+      <select id="package" name="package">
+        <option value="adventure">Adventure Tour</option>
+        <option value="cultural">Cultural Tour</option>
+        <option value="beach">Beach Getaway</option>
+        <option value="wildlife">Wildlife Safari</option>
+      </select>
+
+      <label for="message">Message or Special Requests</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</section>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedPackage = urlParams.get('package');
+
+  if (selectedPackage) {
+    const packageSelect = document.getElementById('package');
+    packageSelect.value = selectedPackage;
+  }
+</script>
+
+  <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <h3>Emerald Lanka</h3>
+      <p>Explore Sri Lanka with curated tours, expert guides, and unforgettable experiences.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="booking.html">Booking</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contact Us</h4>
+      <p>📍 Colombo 05, Sri Lanka</p>
+      <p>📞 +94 123 987 456</p>
+      <p>📧 info@emeraldlanka.com</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Emerald Lanka. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
